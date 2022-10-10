@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
     //Handles request at path /hello
-    @ResponseBody
-    @GetMapping("hello")
-    public String hello(){
-        return "Hello, Spring!";
-    }
+//    @ResponseBody
+//    @GetMapping("hello")
+//    public String hello(){
+//        return "Hello, Spring!";
+//    }
 
     @ResponseBody
     @GetMapping("goodbye")
@@ -21,12 +21,13 @@ public class HelloController {
     }
     //Handles requests of the form /hello?name=LaunchCode
 
-//    @GetMapping("hello")
-//    @ResponseBody
-//    public String helloWithQueryParam(@RequestParam String name){
-//        return "Hello, " + name + "!";
-//    }
-//    //Handles requests of the form /hello/LaunchCode
+    //    //Handles requests of the form /hello/LaunchCode
+    @GetMapping("hello")
+    @ResponseBody
+    public String helloWithQueryParam(@RequestParam String name){
+        return "Hello, " + name + "!";
+    }
+
 //    @GetMapping("hello/{name}")
 //    @ResponseBody
 //    public String helloWithPathParam(@PathVariable String name){
