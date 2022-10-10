@@ -28,10 +28,10 @@ public class HelloController {
         return "Hello, " + name + "!";
     }
 
-//    @GetMapping("hello/{name}")
-//    @ResponseBody
-//    public String helloWithPathParam(@PathVariable String name){
-//        return "Hello, " + name + "!";
+    @GetMapping("hello/{name}")
+    @ResponseBody
+    public String helloWithPathParam(@PathVariable String name){
+        return "Hello, " + name + "!";
 //    }
 //    @GetMapping("form")
 //    @ResponseBody
