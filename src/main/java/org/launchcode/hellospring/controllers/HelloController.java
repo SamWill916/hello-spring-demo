@@ -32,7 +32,7 @@ public class HelloController {
     @ResponseBody
     public String helloWithPathParam(@PathVariable String name){
         return "Hello, " + name + "!";
-//    }
+    }
 //    @GetMapping("form")
 //    @ResponseBody
 //    public String helloForm(){
