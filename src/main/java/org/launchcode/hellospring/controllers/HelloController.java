@@ -32,20 +32,20 @@ public class HelloController {
     @ResponseBody
     public String helloWithPathParam(@PathVariable String name){
         return "Hello, " + name + "!";
-//    }
-//    @GetMapping("form")
-//    @ResponseBody
-//    public String helloForm(){
-//        return "<html>" +
-//                "<body>" +
-//                "<form action = 'hello' method = 'post'>" + //submits request to /hello
-//                "<input type = 'text' name = 'name'>" +
-//                "<input type = 'submit' value = 'Greet Me!'>" +
-//                "</form>" +
-//                "</body>" +
-//                "</html>";
-//
-//    }
-//
+    }
+    @GetMapping("form")
+    @ResponseBody
+    public String helloForm(){
+        return "<html>" +
+                "<body>" +
+                "<form action = 'hello' method = 'post'>" + //submits request to /hello
+                "<input type = 'text' name = 'name'>" +
+                "<input type = 'submit' value = 'Greet Me!'>" +
+                "</form>" +
+                "</body>" +
+                "</html>";
+
+    }
+
 }
 
