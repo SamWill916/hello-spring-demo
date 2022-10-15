@@ -19,10 +19,10 @@ public class HelloController {
         public String goodbye() {
         return "Goodbye, Spring!";
     }
-    //Handles requests of the form /hello?name=LaunchCode
 
-    //    //Handles requests of the form /hello/LaunchCode
-    @GetMapping("hello")
+
+    //Handles requests of the form /hello?name=Sam
+    @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "hello")
     @ResponseBody
     public String helloWithQueryParam(@RequestParam String name){
         return "Hello, " + name + "!";
@@ -38,7 +38,7 @@ public class HelloController {
     public String helloForm(){
         return "<html>" +
                 "<body>" +
-                "<form action = 'hello' method = 'post'>" + //submits request to /hello
+                "<form action = 'hello' method='post'>" + //submits request to /hello
                 "<input type = 'text' name = 'name'>" +
                 "<input type = 'submit' value = 'Greet Me!'>" +
                 "</form>" +
